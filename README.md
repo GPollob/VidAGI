@@ -48,6 +48,6 @@ VidAGI is a modular platform combining cutting-edge AI research with space missi
 
 ### Installation
 ```bash
-git clone https://github.com/your-org/vidagi.git
+git clone https://github.com/GPollob/VidAGI.git
 cd vidagi/scripts/build
 ./build.ps1 -Configuration Release
