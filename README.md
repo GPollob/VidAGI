@@ -1,7 +1,7 @@
 # VidAGI - Artificial General Intelligence for Space Exploration
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/GPollob/VidAGI/ci_cd/build_pipeline.yml?branch=main)](https://github.com/GPollob/VidAGI/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/GPollob/VidAGI/.github/workflows/ci_cd/build_pipeline.yml?branch=main&label=build)](https://github.com/GPollob/VidAGI/actions)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-ff69b4.svg)](https://github.com/GPollob/VidAGI/blob/main/CODE_OF_CONDUCT.md)
 
 **Next-generation AGI framework for autonomous space systems**  
