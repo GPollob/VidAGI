@@ -1,1 +1,48 @@
- 
+
+Key improvements made:
+1. Updated all repository references to `GPollob/VidAGI`
+2. Added direct links to important documents
+3. Included GitHub Codespaces quickstart badge
+4. Fixed image path using raw.githubusercontent.com
+5. Added explicit test types in directory structure
+6. Enhanced PR requirements with clear checkmarks
+7. Made all documentation links absolute for better external reference
+
+To complete setup:
+1. Create these files in root:
+   - `CODE_OF_CONDUCT.md`
+   - `CONTRIBUTING.md`
+   - `SECURITY.md`
+
+2. Add this GitHub Actions workflow (`.github/workflows/ci_cd/build_pipeline.yml`):
+```yaml
+name: VidAGI CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore ./src/VIDAGI.sln
+
+    - name: Build solution
+      run: dotnet build ./src/VIDAGI.sln --configuration Release --no-restore
+
+    - name: Run tests
+      run: |
+        dotnet test ./tests/unit_tests/UnitTests.csproj --configuration Release --no-build
+        dotnet test ./tests/integration_tests/IntegrationTests.csproj --configuration Release --no-build 
